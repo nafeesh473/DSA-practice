@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let data = [2,3,4,6,23,7,44,8,99,65,21];
+        // for(let i = 0; i < data.length; i++){
+        //     let x = 3;
+        //     document.write(data[i])
+        //     document.write(data[x]).value
+        // }
+        // function chackNumber(){
+        //     let numbers = document.getElementById("num").value
+        //     if(numbers < data.length){
+        //         alert(data[numbers])
+        //     }else{
+        //         alert("input your valid number")
+        //     }
+        // }
+     
+        let ids = document.getElementById("body");
+        ids.style.justifyContent = "center"
+
+        function increament(num){
+            let id = document.getElementById("sum")
+            let currant = parseInt(id.innerText) || 0
+             id.innerText = currant + 1
+        }
+        function Decreament(){
+            let id = document.getElementById("sum")
+            let currant = parseInt(id.innerText) || 0
+            id.innerText = currant - 1
+        }
+        function reset(){
+            let id = document.getElementById("sum")
+            let currant = parseInt(id.innerText) || 0
+            id.innerText = currant = 0
+        }
+    </script>
+    <style>
+        #body{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+       
+        button{
+            padding: 10px;
+            border-radius: 5px;
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- <input type="text" id="num" /> -->
+    <!-- <button onclick='chackNumber()' >just check</button> -->
+    
+    <div class="bodys">
+        <div id="body">
+             <button onclick='increament()'>Increament</button>
+             
+             <h1 id="sum">0</h1>
+             
+             <button onclick='Decreament()'>Decreament</button>
+             <button onclick='reset()'>Reset</button>
+            </div>
+        </div>
+    
+</body>
+</html>
