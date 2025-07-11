@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addElement(){
+
+            let arr =[10,50,70,30,80,40];
+            let elem = document.getElementById("element").value
+            element = parseInt(elem)
+            let position = document.getElementById("position").value
+            for(let i = arr.length -1; i >= 0; i--){
+                if(i >= position){
+                    arr[i + 1] = arr[i];
+                    if(i == position){
+                        arr[i] = element
+                    }
+                }
+            }
+            console.log(arr)
+        }
+    </script>
+</head>
+<body>
+    <h1> Array Insertion Prectice</h1>
+    <input type="text" id="element" placeholder="Enter Element"/>
+    <input type="text" id="position" placeholder="Enter Your position"/>
+    <button onclick="addElement()">Add</button>
+</body>
+</html>
