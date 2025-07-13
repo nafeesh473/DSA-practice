@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let array = [12,23,34,45,56,67,78,89,90];
+        // let item = 34;
+        // let index = null
+        // for(let i = 0; i<= array.length -1; i++){
+        //     if(array[i] === item){
+        //         index = i
+
+        //     }
+        // }
+        // console.log(array[index])
+
+function searchArr(){
+     let array = [12,23,34,45,56,67,78,89,90];
+        let item = document.getElementById("items").value;
+        let index = undefined;
+        for(let i = 0; i <= array.length -1; i++){
+            if(array[i] === parseInt(item)){
+                index = i;
+                break
+
+            }
+        }
+        console.log(index)
+
+}
+
+    </script>
+</head>
+<body>
+    <input type="text" id="items" placeholder="Enter item"/>
+    <button onclick="searchArr()">Search</button>
+    
+</body>
+</html>
